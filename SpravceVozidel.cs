@@ -8,34 +8,33 @@ namespace HW9_SpravceVozidel
 {
     public class SpravceVozidel
     {
-        public List<Vozidlo> SeznamVozidel = new List<Vozidlo>();
-        private string typVozidla;
+        public List<Automobil> SeznamAut = new List<Automobil>();
+        public List<Motocykl> SeznamMotorek = new List<Motocykl>();
+     
 
         public void PridaniAuta(string typVozidla, int rokVyroby, string barva, int pocetDveri, string model)
         {
-            SeznamVozidel.Add(new Automobil(typVozidla, rokVyroby, barva, pocetDveri, model) { });
+            SeznamAut.Add(new Automobil(typVozidla, rokVyroby, barva, pocetDveri, model) { });
             
         }
 
         public void PridaniMotorky(string typVozidla, int rokVyroby, string barva, int pocetKol, string typMotocyklu)
         {
-            SeznamVozidel.Add(new Motocykl(typVozidla, rokVyroby, barva, pocetKol, typMotocyklu) { });
+            SeznamMotorek.Add(new Motocykl(typVozidla, rokVyroby, barva, pocetKol, typMotocyklu) { });
 
         }
 
         public void ZobrazNaKonzoli() 
         {
-            foreach (var vozidlo  in SeznamVozidel)
+            Console.WriteLine("Vypis seznamu aut");
+            foreach (var vozidlo  in SeznamAut)
             {
-                Console.WriteLine($"{vozidlo.TypVozidla}, {vozidlo.RokVyroby}, {vozidlo.Barva}");
-                if (vozidlo.TypVozidla == "auto") 
-                {
-                    Console.Write($"Jak sem vypsat model auta a pocet dveri?");                    
-                }
-                else if (vozidlo.TypVozidla == "moto")
-                {
-                    Console.Write($"Jak sem vypsat typ motorky a pocet kol?");
-                }
+                Console.WriteLine($"Typ vozidla: {vozidlo.TypVozidla}, Rok vyroby: {vozidlo.RokVyroby}, Barva: {vozidlo.Barva}, Pocet dveri: {vozidlo.PocetDveri}, Model: {vozidlo.Model}");          
+            }
+            Console.WriteLine("Vypis seznamu motorek");
+            foreach (var vozidlo in SeznamMotorek)
+            {
+                Console.WriteLine($"Typ vozidla: {vozidlo.TypVozidla}, Rok vyroby: {vozidlo.RokVyroby}, Barva: {vozidlo.Barva}, Pocet kol: {vozidlo.PocetKol}, Typ motocyklu: {vozidlo.TypMotocyklu}");
             }
         }
 

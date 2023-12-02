@@ -16,5 +16,7 @@ namespace HW9_SpravceVozidel
             PocetDveri = pocetDveri;
             Model = model;
         }
+
+      
     }
 }
