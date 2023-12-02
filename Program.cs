@@ -6,7 +6,7 @@ using System.Reflection;
 SpravceVozidel auto = new SpravceVozidel();
 auto.PridaniAuta("auto", 2022, "hneda", 5, "Peugeot, 3008");
 auto.PridaniAuta("auto", 2012, "zelena", 3, "Renault, Zafira");
-auto.PridaniAuta("auto", 2019, "stribran", 5, "Skoda, Superb");
+auto.PridaniAuta("auto", 2019, "stribrna", 5, "Skoda, Superb");
 auto.PridaniAuta("auto", 2019, "Blue", 4 , "Toyota, Camry");
 auto.PridaniAuta("auto", 2020, "Red", 2, "Ford, Mustang");
 auto.PridaniAuta("auto", 2022, "Silver", 5 , "Honda, Civic");
@@ -26,5 +26,6 @@ moto.PridaniMotorky("moto", 2020, "Stribrna", 2, "BMW Naked bike");
 
 
 auto.ZobrazNaKonzoli();
+moto.ZobrazNaKonzoli();
 
 Console.ReadLine();

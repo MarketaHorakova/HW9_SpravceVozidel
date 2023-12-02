@@ -26,15 +26,16 @@ namespace HW9_SpravceVozidel
 
         public void ZobrazNaKonzoli() 
         {
-            Console.WriteLine("Vypis seznamu aut");
+            
+            Console.WriteLine("Vypis seznamu");
             foreach (var vozidlo  in SeznamAut)
             {
-                Console.WriteLine($"Typ vozidla: {vozidlo.TypVozidla}, Rok vyroby: {vozidlo.RokVyroby}, Barva: {vozidlo.Barva}, Pocet dveri: {vozidlo.PocetDveri}, Model: {vozidlo.Model}");          
+                Console.WriteLine($"Typ vozidla: {vozidlo.TypVozidla}, Rok vyroby: {vozidlo.RokVyroby}, Barva: {vozidlo.Barva},\t Pocet dveri: {vozidlo.PocetDveri}, Model: {vozidlo.Model}");          
             }
-            Console.WriteLine("Vypis seznamu motorek");
+            
             foreach (var vozidlo in SeznamMotorek)
             {
-                Console.WriteLine($"Typ vozidla: {vozidlo.TypVozidla}, Rok vyroby: {vozidlo.RokVyroby}, Barva: {vozidlo.Barva}, Pocet kol: {vozidlo.PocetKol}, Typ motocyklu: {vozidlo.TypMotocyklu}");
+                Console.WriteLine($"Typ vozidla: {vozidlo.TypVozidla}, Rok vyroby: {vozidlo.RokVyroby}, Barva: {vozidlo.Barva},\t Pocet kol: {vozidlo.PocetKol}, Typ motocyklu: {vozidlo.TypMotocyklu}");
             }
         }
 
